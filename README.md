@@ -84,6 +84,9 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 - [HiSilicon_IPC](https://github.com/Nopiskl/HiSilicon_IPC)  
   基于 HiSilicon 平台的 IPC 摄像头 MPP APP 开发，不涉及驱动相关内容。
 
+- [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)  
+  基于 V821 为主控的光波导 AI 眼镜项目，支持本地部署小智 AI、触摸拍照、录音录像等功能。
+
 - [A733_AIOT](https://github.com/Nopiskl/A733_AIOT)  
   基于 A733 SoC 与开源主板 RADXA 设计的 APP / Demo / SDK，便于后续 AIoT 相关开发。
 
