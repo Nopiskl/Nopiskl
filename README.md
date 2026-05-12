@@ -69,7 +69,7 @@ Github仓库介绍：
 
 ---
 
-### 3. 嵌入式音视频 / 驱动 / AI 摄像头 / 边缘 AI / AIoT 全栈类型项目
+### 3. 嵌入式音视频 / 驱动 / 边缘 AI / AIoT 全栈类型项目
 
 围绕嵌入式 Linux 音视频链路及驱动 、硬件编解码、C++ 网络通信、AI 推理应用进行开发，多个项目实现硬件编解码加速+AI npu部署的全栈项目。
 
@@ -80,7 +80,7 @@ Github仓库介绍：
 - [AI_SecurityRecorder](https://github.com/Nopiskl/AI_SecurityRecorder)  
   V853 AI 物联网安防记录仪，可作为 AI 监控摄像头使用，支持RTSP 推流、标记录像、只能抓拍、人形智能警报等功能。
 
-  - [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)  
+- [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)  
   基于 V821 为主控的光波导 AI 眼镜项目，支持本地部署小智 AI、触摸拍照、录音录像等功能+原型PCB设计。
 
 - [Smart_IPC](https://github.com/Nopiskl/Smart_IPC)  
@@ -94,7 +94,7 @@ Github仓库介绍：
 
 ---
 
-### 4. Android 系统移植 / HAL / 驱动适配
+### 4. Android 系统移植 / HAL / 驱动编写与适配
 
 关注 Android 系统移植、Linux 驱动适配、HAL 层开发以及上层基础应用开发。
 
