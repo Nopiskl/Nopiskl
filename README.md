@@ -1,7 +1,11 @@
+由于本人的部分项目正在完善+改正BUG，为了使开源项目能更规范、更客观，我也正在学习工程化SDK打包、git提交等，
+因此我需要一段时间沉淀修改并且交叉验证后后才能逐步把这些东西放出来，望谅解
 
+Github仓库介绍：
 ## 学习笔记
 
 [Learning_Notes](https://github.com/Nopiskl/Learning_Notes)
+CSDN blog：https://blog.csdn.net/Nopiskl
 
 ### 1. 底层架构 / Bootloader / Linux 内核 / 驱动体系 / 操作系统学习资料汇总
 
