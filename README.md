@@ -50,7 +50,7 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 
 ---
 
-### 2. IIoT 设计 / BSP / Linux 移植 / 驱动适配
+### 2. IIoT 设计 / BSP / Linux 驱动 ROOTFS 移植适配
 
 主要涉及 PCB 设计、ARM64 Linux 移植、Ubuntu 系统适配、BSP 设计以及工业 / 嵌入式硬件平台开发。
 
@@ -112,3 +112,27 @@ CSDN blog：https://blog.csdn.net/Nopiskl
   qt-yolo 是一个“桌面端实时检测 + 本地数据库 + 后端查询 + Web 仪表板”的完整示例工程。  
   桌面端使用 Qt6 / C++ 调用摄像头并运行 YOLOv5 ONNX 模型，检测结果写入 SQLite。  
   FastAPI 后端读取同一份数据目录，Vue / Vite 前端用于展示运行状态、统计数据和快照。
+
+---
+
+### 6. Linux 网络 / 工业网关
+
+主要记录 Linux 网络服务、工业网关、数据采集、代理服务以及 Web 管理界面等相关项目。
+
+- [Embedded_TinyGateway](https://github.com/Nopiskl/Embedded_TinyGateway)  
+  TinyServer 是一个完整的工业网关系统解决方案，提供数据采集、文件服务、代理服务和 Web 管理界面等功能。
+  
+---
+
+### 7. Misc Projects
+
+记录一些独立项目、早期应用实践以及个人 Blog 中提到的相关资源。
+
+- [PVZ_CPP_Remake](https://github.com/Nopiskl/PVZ_CPP_Remake)  
+  PVZ 的 C++ 自制版，用于学习 C++、设计模式以及底层游戏引擎。
+
+- [AICERT_APP](https://github.com/Nopiskl/AICERT_APP)  
+  早期 AI 面试 APP，基于 Vue 和 TypeScript 开发，并已完成微信小程序部署。
+
+- [Allwinner_Drivers](https://github.com/Nopiskl/Allwinner_Drivers)  
+  一些个人 Blog 中提到的 Allwinner 相关资源。
