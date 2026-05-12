@@ -57,7 +57,8 @@
 
 - [T527_MicroPC](https://github.com/Nopiskl/T527_MicroPC)  
   T527 MicroPC IIOT ，8 层高速 PCB 设计。  
-  已完成官方 SDK 适配以及自定义 BSP 适配，支持 Mainline Linux / Ubuntu CLI / Armbian 系统适配。  
+  已完成官方 SDK 适配以及自定义 BSP 适配，支持 Mainline Linux / Ubuntu CLI / Armbian / Openwrt系统适配。
+  可用于Openwrt作为网关、适配ROS系统、作为AI控制上位等  
   已完成与 [Linux_BSP](https://github.com/Nopiskl/Linux_BSP) 项目联动。
 
 ---
