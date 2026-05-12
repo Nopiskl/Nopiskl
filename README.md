@@ -1,11 +1,13 @@
-由于本人的部分项目正在完善+改正BUG，为了使开源项目能更规范、更客观，我也正在学习工程化SDK打包、git提交等，
-因此我需要一段时间沉淀修改并且交叉验证后后才能逐步把这些东西放出来，望谅解
+由于本人的项目正在完善+改正BUG，为了使开源项目能更规范、更可观，我也正在学习工程化SDK打包、更进阶的git管理等，
+因此我需要一段时间沉淀修改并且交叉验证后后才能逐步把这些项目放出来，望谅解
+
+CSDN blog：https://blog.csdn.net/Nopiskl
 
 Github仓库介绍：
 ## 学习笔记
 
 [Learning_Notes](https://github.com/Nopiskl/Learning_Notes)
-CSDN blog：https://blog.csdn.net/Nopiskl
+
 
 ### 1. 底层架构 / Bootloader / Linux 内核 / 驱动体系 / 操作系统学习资料汇总
 
@@ -15,7 +17,7 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 
 1. 系统研究 Linux 内核进程调度、内存分配、网络、驱动框架等具体底层实现，主要依赖 Mainline Kernel 进行分析。
 
-2. 研究底层 Bootloader、U-Boot 启动流程、AI Fastboot 快起加速、rootfs 裁剪等内容，主要以 Allwinner、Rockchip 和 Mainline Kernel 为例进行分析。
+2. 研究底层 Bootloader、U-Boot 启动流程、AI Fastboot 快起加速、rootfs 裁剪等内容，主要以 Allwinner、Rockchip和Mainline Kernel为例进行分析。
 
 3. 研究 Linux 各类子系统具体实现，包括 V4L2、DRM、Pinctrl 等，主要以 Allwinner、Rockchip 平台为例进行分析。
 
@@ -37,7 +39,7 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 
 ## 项目目录
 
-### 1. 底层系统 / CPU / SoC / FPGA
+### 1. 底层系统 / CPU / SoC / FPGA / Linux驱动开发
 
 主要方向包括 RISC-V MCU、RISC-V64 SoC、FPGA 数据通道、Bootloader 与 Linux 启动流程。
 
@@ -55,40 +57,40 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 主要涉及 PCB 设计、ARM64 Linux 移植、Ubuntu 系统适配、BSP 设计以及工业 / 嵌入式硬件平台开发。
 
 - [Linux_BSP](https://github.com/Nopiskl/Linux_BSP)  
-  轻量化的 Linux 一键开发脚本，用于开发 Mainline U-Boot / Kernel / Rootfs。  
+  轻量化的Linux开发SDK，用于开发Mainline U-Boot / Kernel / Rootfs。  
   支持全自动编译 BSP、自定义配置，简单易上手。  
-  自研轻量级、多 SoC 支持的 BSP 设计，面向主线 Linux，关注可维护性、可移植性与多平台复用。
+  自研轻量级、多SoC支持的BSP设计，面向主线Linux，关注可维护性、可移植性与多平台复用。
 
 - [T527_MicroPC](https://github.com/Nopiskl/T527_MicroPC)  
-  T527 MicroPC IIOT ，8 层高速 PCB 设计。  
+  基于T527的MicroPC IIOT ，8 层高速 PCB 设计。  
   已完成官方 SDK 适配以及自定义 BSP 适配，支持 Mainline Linux / Ubuntu CLI / Armbian / Openwrt系统适配。
   可用于Openwrt作为网关、适配ROS系统、作为AI控制上位等  
   已完成与 [Linux_BSP](https://github.com/Nopiskl/Linux_BSP) 项目联动。
 
 ---
 
-### 3. 嵌入式音视频驱动 / AI 摄像头 / 边缘 AI / AIoT
+### 3. 嵌入式音视频 / 驱动 / AI 摄像头 / 边缘 AI / AIoT 全栈类型项目
 
-围绕嵌入式 Linux 音视频链路、硬件编解码、C++ 网络通信、AI 推理应用进行开发，多个项目实现硬件编解码加速。
+围绕嵌入式 Linux 音视频链路及驱动 、硬件编解码、C++ 网络通信、AI 推理应用进行开发，多个项目实现硬件编解码加速+AI npu部署的全栈项目。
 
 - [AI_SportCamera](https://github.com/Nopiskl/AI_SportCamera)  
-  V851S YOLO 相机 / 行车记录仪项目，包含 OpenCV 与全志 MPP 双版本实现。  
+  V851S YOLO 相机 / 行车记录仪项目，包含 OpenCV 通用版与全志 MPP 双版本实现+原型PCB设计。  
   适用于 Sport AI Camera 扩展开发与研究。
 
-- [Smart_IPC](https://github.com/Nopiskl/Smart_IPC)  
-  RV1106 YOLO IPC，支持手机小程序与 Web 端控制。
-
 - [AI_SecurityRecorder](https://github.com/Nopiskl/AI_SecurityRecorder)  
-  V853 AI 物联网安防记录仪，可作为 AI 监控摄像头使用，支持 RTSP 推流、智能警报等功能。
+  V853 AI 物联网安防记录仪，可作为 AI 监控摄像头使用，支持RTSP 推流、标记录像、只能抓拍、人形智能警报等功能。
 
+  - [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)  
+  基于 V821 为主控的光波导 AI 眼镜项目，支持本地部署小智 AI、触摸拍照、录音录像等功能+原型PCB设计。
+
+- [Smart_IPC](https://github.com/Nopiskl/Smart_IPC)  
+  RV1106 YOLO IPC，支持手机小程序与 Web 端控制的IPC，可进行AI识别RTSP推流，采用RK硬件VPU NPU加速。
+  
 - [HiSilicon_IPC](https://github.com/Nopiskl/HiSilicon_IPC)  
-  基于 HiSilicon 平台的 IPC 摄像头 MPP APP 开发，不涉及驱动相关内容。
+  基于 HiSilicon 平台的 IPC 摄像头 MPP APP 开发，纯应用层。
 
-- [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)  
-  基于 V821 为主控的光波导 AI 眼镜项目，支持本地部署小智 AI、触摸拍照、录音录像等功能。
-
-- [A733_AIOT](https://github.com/Nopiskl/A733_AIOT)  
-  基于 A733 SoC 与开源主板 RADXA 设计的 APP / Demo / SDK，便于后续 AIoT 相关开发。
+- [AIOT](https://github.com/Nopiskl/AIOT)  
+  基于Allwinner平台T527/A733以及Rockchip平台RK3568/RK3576/RK3588等设计的的AI agent环境，便于后续 AIoT 相关开发。
 
 ---
 
@@ -97,10 +99,12 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 关注 Android 系统移植、Linux 驱动适配、HAL 层开发以及上层基础应用开发。
 
 - [A133-Android-Phone](https://github.com/Nopiskl/A133-Android-Phone)  
-  A133 Android 10 Mobile Phone，包含 Android 10 系统移植、HIDL / Legacy HAL 驱动适配与上层简易 APP 开发。
+  A133 Android10 MobilePhone，包含硬件设计、Android 10 系统移植、HIDL / Legacy HAL 驱动适配与上层简易APP开发(用于演示APP驱动交互)。
 
 - [A733_AndroidPad](https://github.com/Nopiskl/A733_AndroidPad)  
-  A733 Android 15 Pad，包含 Android 15 系统移植、HIDL / AIDL 驱动适配与 NPU 相关 Android 视觉 APP 开发。
+  A733 Android15 Pad，原型Teclast P50AI。包含 Android15 系统移植、HIDL / AIDL 驱动适配与 NPU 相关 Android 视觉 APP 开发
+  注：该仓库主要侧重于软件方面的移植适配，对于硬件则采用成品主板+Teclast P50AI为硬件基础，
+  在其基础上进行官方SDK迁移+APP研发以覆盖完整的AllwinnerPAD系列开发。
 
 ---
 
@@ -121,6 +125,7 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 
 - [Embedded_TinyGateway](https://github.com/Nopiskl/Embedded_TinyGateway)  
   TinyServer 是一个完整的工业网关系统解决方案，提供数据采集、文件服务、代理服务和 Web 管理界面等功能。
+  采用最基础的Linux系统调用+函数封装，从最底层打造最简单、资源占用最少的小型嵌入式网关。
   
 ---
 
@@ -130,9 +135,6 @@ CSDN blog：https://blog.csdn.net/Nopiskl
 
 - [PVZ_CPP_Remake](https://github.com/Nopiskl/PVZ_CPP_Remake)  
   PVZ 的 C++ 自制版，用于学习 C++、设计模式以及底层游戏引擎。
-
-- [AICERT_APP](https://github.com/Nopiskl/AICERT_APP)  
-  早期 AI 面试 APP，基于 Vue 和 TypeScript 开发，并已完成微信小程序部署。
 
 - [Allwinner_Drivers](https://github.com/Nopiskl/Allwinner_Drivers)  
   一些个人 Blog 中提到的 Allwinner 相关资源。
