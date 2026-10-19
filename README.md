@@ -62,15 +62,37 @@ This category focuses on RISC-V MCUs, RISC-V64 SoCs, FPGA data paths, Bootloader
 
 #### [RISC-V_MCU](https://github.com/Nopiskl/RISC-V_MCU)
 
-A self-developed three-stage pipeline RISC-V MCU with interrupt and peripheral support.  
-The project also includes RTOS porting and FPGA deployment.
+A self-developed three-stage pipeline RISC-V MCU in Verilog with interrupt and peripheral support.  
+The project also includes FreeRTOS porting and FPGA deployment.
 
 #### [RISCV64_SOC](https://github.com/Nopiskl/RISCV64_SOC)
 
-A Linux-capable RISC-V64 SoC adapted from open-source references.  
-The project includes Mainline Linux porting and basic peripheral driver support, including pinctrl, I2C, SPI, SDCard, and Ethernet.
+A complete Linux-capable SoC based on the open-source RocketChip RISC-V64 core.  
+The project integrates peripheral, SDMMC, DDR, display, video and Ethernet controllers, self-developed MJPEG and ISP IP, and the corresponding Linux drivers.
 
-After deployment on an XC7A100T FPGA, the SoC can boot and run a Debian 11 rootfs.
+After FPGA deployment, the SoC can boot and run a Debian 13 rootfs.
+
+#### [TinyISP](https://github.com/Nopiskl/TinyISP)
+
+A self-developed Verilog MJPEG codec with a Linux driver, integrated into RISCV64_SOC.
+
+#### [TinyMjpeg](https://github.com/Nopiskl/TinyMjpeg)
+
+A self-developed Verilog ISP image processor with a Linux driver, integrated into RISCV64_SOC.
+
+#### [PCIe-yolov5-accelerator](https://github.com/Nopiskl/PCIe-yolov5-accelerator)
+
+A YOLOv5 CNN hardware accelerator with a Linux driver, available as an XDMA PCIe version and a packaged ZYNQ IP version.
+
+#### [Neko_zephyr](https://github.com/Nopiskl/zephyr)
+
+An Allwinner F101 Zephyr port forked from YuzukiHD for modification and learning, targeting the YuzukiNeko board.  
+It covers board support, display, audio, USB and storage drivers, with functional components and examples in zephyr-components.
+
+#### [Neko_APP](https://yuzukihd.github.io/YuzukiNeko/zh/)
+
+An application modification and learning project based on forks from the YuzukiHD / YuzukiNeko ecosystem for Allwinner F101 and Zephyr.  
+It covers NekoBox, LVGL interfaces, media playback, game emulators, MicroPython and ncnn examples.
 
 ---
 
@@ -94,8 +116,8 @@ Features include:
 
 A T527-based MicroPC / IIoT hardware platform with an 8-layer high-speed PCB design.
 
-The project includes official SDK adaptation and a custom BSP adaptation.  
-It supports Mainline Linux, Ubuntu CLI, Armbian, and OpenWrt system adaptation.
+The project includes a custom mainline BSP with Bootloader development, Linux kernel adaptation and automated rootfs builds.  
+It also supports Android 13 and provides schematic, EDA, Gerber and STEP hardware files.
 
 Potential use cases include:
 
@@ -106,15 +128,28 @@ Potential use cases include:
 
 This project is also integrated with [Linux_BSP](https://github.com/Nopiskl/Linux_BSP).
 
+#### [AI_VisionModule_Hardware](https://github.com/Nopiskl/AI_VisionModule/tree/main/Hardware)
+
+V851S AI vision module hardware with DVP and MIPI variants, including schematics, EDA projects and STEP files.
+
+#### [A133_Android_MobilePhone_Hardware](https://github.com/Nopiskl/A133_Android_MobilePhone/tree/main/A133_Hardware)
+
+A133 portable terminal hardware designs, including v1.0 / v2.0 projects, design references and board-test images.
+
+#### [YuzukiNeko_Hardware](https://github.com/Nopiskl/YuzukiNeko)
+
+An Allwinner F101 Pico-style board project forked from YuzukiHD / YuzukiNeko for modification and learning.  
+It includes hardware designs, carrier-board resources and 3D enclosure files.
+
 ---
 
 ### 3. Embedded Audio/Video / Drivers / Edge AI / AIoT Full-Stack Projects
 
 This category focuses on embedded Linux audio/video pipelines, drivers, hardware codecs, C++ network communication, AI inference applications, and NPU-accelerated full-stack AIoT projects.
 
-#### [AI_SportCamera](https://github.com/Nopiskl/AI_SportCamera)
+#### [AI_VisionModule](https://github.com/Nopiskl/AI_VisionModule)
 
-A V851S-based YOLO camera / dashcam project.
+A V851S-based miniature YOLO vision module / edge AI coprocessor.
 
 The project includes:
 
@@ -122,29 +157,29 @@ The project includes:
 - Allwinner MPP version
 - Prototype PCB design
 
-It can be used for Sport AI Camera expansion and research.
+It can also serve as a UVC AI module, smart action camera, visual robot controller and AI gimbal controller.
 
-#### [AI_SecurityRecorder](https://github.com/Nopiskl/AI_SecurityRecorder)
+#### [EdgeVision-AMP](https://github.com/Nopiskl/EdgeVision-AMP)
 
-A V853-based AIoT security recorder that can be used as an AI surveillance camera.
+An industrial CDR / IPC demo for Allwinner AMP platforms, covering V853 AI cameras and V821 low-power AOV / fast-start camera environments.
 
 Features include:
 
-- RTSP streaming
-- Tagged video recording
-- Intelligent snapshot capture
-- Human detection alerts
+- V853 AI camera / recorder development
+- V821 low-power AOV / fast-start CDR support
+- AMP media-pipeline acceleration
+- Low-power WiFi standby control
 
 #### [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)
 
-A V821-based optical waveguide AI glasses project.
+A V821-based optical waveguide AI glasses project using AMP heterogeneous processing to reduce latency.
 
 Features include:
 
 - Local XiaoZhi AI deployment
 - Touch-triggered photo capture
 - Audio recording
-- Video recording
+- Stabilized video recording
 - Prototype PCB design
 
 #### [Smart_IPC](https://github.com/Nopiskl/Smart_IPC)
@@ -178,25 +213,25 @@ This category focuses on Android system porting, Linux driver adaptation, HAL de
 
 #### [A133-Android-Phone](https://github.com/Nopiskl/A133-Android-Phone)
 
-An A133 Android 10 mobile phone project.
+An A133 Android 10 mobile phone project with a complete four-layer schematic and PCB design.
 
 The project includes:
 
 - Hardware design
 - Android 10 system porting
 - HIDL / Legacy HAL driver adaptation
-- A simple upper-layer demo app for demonstrating app-driver interaction
+- Board-level Android system validation
 
 #### [A733_AndroidPad](https://github.com/Nopiskl/A733_AndroidPad)
 
-An A733 Android 15 Pad project based on the Teclast P50AI prototype.
+An A733 Android 15 Pad port based on reverse engineering of mass-produced Teclast hardware.
 
 The project focuses on software migration and adaptation, including:
 
 - Android 15 system porting
 - HIDL / AIDL driver adaptation
-- NPU-related Android vision application development
-- Official SDK migration and application development for the Allwinner Pad series
+- Camera, Display and Codec AIDL pipeline validation
+- Teclast hardware reverse engineering and system validation
 
 ---
 
@@ -248,7 +283,7 @@ A C++ remake of Plants vs. Zombies, used for learning C++, design patterns, and 
 
 #### [Allwinner_Drivers](https://github.com/Nopiskl/Allwinner_Drivers)
 
-A collection of Allwinner-related resources mentioned in my personal blog.
+A collection of Allwinner SoC drivers, patches and multimedia libraries, including A133 CedarX resources and V851S OpenCV / VIN ISP adaptation.
 
 ---
 

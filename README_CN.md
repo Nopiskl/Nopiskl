@@ -62,14 +62,36 @@
 
 #### [RISC-V_MCU](https://github.com/Nopiskl/RISC-V_MCU)
 
-自研三级流水 RISC-V MCU，支持中断与外设，并完成 RTOS 移植和 FPGA 部署。
+使用 Verilog 自研三级流水 RISC-V MCU，支持中断与外设，并完成 FreeRTOS 移植和 FPGA 部署。
 
 #### [RISCV64_SOC](https://github.com/Nopiskl/RISCV64_SOC)
 
-参考开源项目移植适配的可运行 Linux 的 RISC-V64 SoC。  
-该项目完成了 Mainline Linux 移植，并支持 pinctrl、I2C、SPI、SDCard、网口等基础外设驱动。
+基于开源 RocketChip RISC-V64 内核的完整 SoC 设计，可运行 Linux。  
+集成基础外设、SDMMC、DDR、显示、视频与以太网控制器、自研 MJPEG 编解码器和 ISP 图像处理器，并完善配套 Linux 驱动。
 
-在 XC7A100T FPGA 上部署后，可正常运行 Debian 11 rootfs。
+在 FPGA 上部署后，可正常运行 Debian 13 rootfs。
+
+#### [TinyISP](https://github.com/Nopiskl/TinyISP)
+
+自研基于 Verilog 的 MJPEG 编解码器，配套 Linux 驱动，并成功接入 RISCV64_SOC。
+
+#### [TinyMjpeg](https://github.com/Nopiskl/TinyMjpeg)
+
+自研基于 Verilog 的 ISP 图像处理器，配套 Linux 驱动，并成功接入 RISCV64_SOC。
+
+#### [PCIe-yolov5-accelerator](https://github.com/Nopiskl/PCIe-yolov5-accelerator)
+
+YOLOv5 CNN 硬件加速器，配套 Linux 驱动，提供 XDMA PCIe 版本与 ZYNQ IP 封装版本。
+
+#### [Neko_zephyr](https://github.com/Nopiskl/zephyr)
+
+基于 YuzukiHD Zephyr 分支 fork 的 Allwinner F101 移植适配与学习版本，面向 YuzukiNeko 开发板。  
+覆盖板级适配、显示、音频、USB 与存储驱动，并配套提供 zephyr-components 功能组件与示例。
+
+#### [Neko_APP](https://yuzukihd.github.io/YuzukiNeko/zh/)
+
+基于 YuzukiHD / YuzukiNeko 生态 fork 的 Allwinner F101 / Zephyr 应用修改与学习项目。  
+覆盖 NekoBox、LVGL 界面、媒体播放、游戏模拟器、MicroPython 与 ncnn 应用示例。
 
 ---
 
@@ -93,7 +115,7 @@
 
 基于 T527 的 MicroPC / IIoT 硬件平台，采用 8 层高速 PCB 设计。
 
-项目已完成官方 SDK 适配与自定义 BSP 适配，支持 Mainline Linux、Ubuntu CLI、Armbian 与 OpenWrt 系统适配。
+项目包含自定义主线 BSP，覆盖 Bootloader 编写、Linux 内核适配与 Rootfs 自动化构建，同时兼容 Android 13，并提供原理图、EDA 工程、Gerber 与 STEP 硬件文件。
 
 可用于：
 
@@ -104,15 +126,28 @@
 
 该项目已与 [Linux_BSP](https://github.com/Nopiskl/Linux_BSP) 联动。
 
+#### [AI_VisionModule_Hardware](https://github.com/Nopiskl/AI_VisionModule/tree/main/Hardware)
+
+基于 V851S 的 AI 视觉模组硬件设计，提供 DVP / MIPI 两套方案，包含原理图、EDA 工程与 STEP 结构文件。
+
+#### [A133_Android_MobilePhone_Hardware](https://github.com/Nopiskl/A133_Android_MobilePhone/tree/main/A133_Hardware)
+
+A133 便携终端硬件设计资料，包含 v1.0 / v2.0 硬件工程、设计参考与实机测试图。
+
+#### [YuzukiNeko_Hardware](https://github.com/Nopiskl/YuzukiNeko)
+
+基于 YuzukiHD / YuzukiNeko 上游 fork 的全志 F101 Pico 风格开发板硬件修改与学习项目。  
+包含硬件设计、扩展底板与 3D 外壳资料。
+
 ---
 
 ### 3. 嵌入式音视频 / 驱动 / 边缘 AI / AIoT 全栈项目
 
 围绕嵌入式 Linux 音视频链路、驱动、硬件编解码、C++ 网络通信、AI 推理应用进行开发，多个项目实现了硬件编解码加速与 AI NPU 部署。
 
-#### [AI_SportCamera](https://github.com/Nopiskl/AI_SportCamera)
+#### [AI_VisionModule](https://github.com/Nopiskl/AI_VisionModule)
 
-V851S YOLO 相机 / 行车记录仪项目。
+基于 V851S 的微型 YOLO 图传视觉模组 / AI 边缘协处理器。
 
 项目包括：
 
@@ -120,28 +155,28 @@ V851S YOLO 相机 / 行车记录仪项目。
 - 全志 MPP 版本
 - 原型 PCB 设计
 
-适用于 Sport AI Camera 扩展开发与研究。
+可用于 UVC AI 模组、智能运动相机、视觉机器人控制处理与 AI 智能云台控制。
 
-#### [AI_SecurityRecorder](https://github.com/Nopiskl/AI_SecurityRecorder)
+#### [EdgeVision-AMP](https://github.com/Nopiskl/EdgeVision-AMP)
 
-V853 AIoT 安防记录仪，可作为 AI 监控摄像头使用。
+面向全志 AMP 异构平台的工业级 CDR / IPC Demo，覆盖 V853 AI 摄像头与 V821 低功耗 AOV / 快起摄像头开发环境。
 
 功能包括：
 
-- RTSP 推流
-- 标记录像
-- 智能抓拍
-- 人形智能警报
+- V853 AI 摄像头 / 记录仪开发
+- V821 低功耗 AOV / 快起 CDR 支持
+- AMP 异构加速 Media 链路
+- 超低功耗 WiFi 待机控制
 
 #### [V821_AIGlassess](https://github.com/Nopiskl/V821_AIGlassess)
 
-基于 V821 主控的光波导 AI 眼镜项目。
+基于 V821 主控的光波导 AI 眼镜项目，使用 AMP 异构并行计算降低延迟。
 
 功能包括：
 
 - 本地部署小智 AI
 - 触摸拍照
-- 录音录像
+- 录音与防抖录像
 - 原型 PCB 设计
 
 #### [Smart_IPC](https://github.com/Nopiskl/Smart_IPC)
@@ -175,25 +210,25 @@ RV1106 YOLO IPC 项目。
 
 #### [A133-Android-Phone](https://github.com/Nopiskl/A133-Android-Phone)
 
-A133 Android 10 MobilePhone 项目。
+A133 Android 10 MobilePhone 项目，包含完整的 4 层原理图与 PCB 设计。
 
 项目包括：
 
 - 硬件设计
 - Android 10 系统移植
 - HIDL / Legacy HAL 驱动适配
-- 用于演示 APP 与驱动交互的简易上层应用
+- 板级 Android 系统适配与验证
 
 #### [A733_AndroidPad](https://github.com/Nopiskl/A733_AndroidPad)
 
-A733 Android 15 Pad 项目，原型为 Teclast P50AI。
+基于已量产 Teclast 平板硬件逆向的 A733 Android 15 系统移植项目。
 
 项目主要侧重软件迁移与适配，包括：
 
 - Android 15 系统移植
 - HIDL / AIDL 驱动适配
-- NPU 相关 Android 视觉 APP 开发
-- 官方 SDK 迁移与 Allwinner Pad 系列应用开发
+- Camera、Display 与 Codec AIDL 链路验证
+- Teclast 硬件逆向与系统适配验证
 
 ---
 
@@ -245,7 +280,7 @@ PVZ 的 C++ 自制版，用于学习 C++、设计模式以及底层游戏引擎�
 
 #### [Allwinner_Drivers](https://github.com/Nopiskl/Allwinner_Drivers)
 
-一些个人 Blog 中提到的 Allwinner 相关资源。
+Allwinner SoC 驱动、补丁与多媒体库合集，包含 A133 CedarX 资源及 V851S OpenCV / VIN ISP 适配。
 
 ---
 
