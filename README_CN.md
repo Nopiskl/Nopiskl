@@ -88,7 +88,7 @@ YOLOv5 CNN 硬件加速器，配套 Linux 驱动，提供 XDMA PCIe 版本与 ZY
 基于 YuzukiHD Zephyr 分支 fork 的 Allwinner F101 移植适配与学习版本，面向 YuzukiNeko 开发板。  
 覆盖板级适配、显示、音频、USB 与存储驱动，并配套提供 zephyr-components 功能组件与示例。
 
-#### [Neko_APP](https://yuzukihd.github.io/YuzukiNeko/zh/)
+#### [Neko_APP](https://github.com/Nopiskl/zephyr-components)
 
 基于 YuzukiHD / YuzukiNeko 生态 fork 的 Allwinner F101 / Zephyr 应用修改与学习项目。  
 覆盖 NekoBox、LVGL 界面、媒体播放、游戏模拟器、MicroPython 与 ncnn 应用示例。

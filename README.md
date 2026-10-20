@@ -89,7 +89,7 @@ A YOLOv5 CNN hardware accelerator with a Linux driver, available as an XDMA PCIe
 An Allwinner F101 Zephyr port forked from YuzukiHD for modification and learning, targeting the YuzukiNeko board.  
 It covers board support, display, audio, USB and storage drivers, with functional components and examples in zephyr-components.
 
-#### [Neko_APP](https://yuzukihd.github.io/YuzukiNeko/zh/)
+#### [Neko_APP](https://github.com/Nopiskl/zephyr-components)
 
 An application modification and learning project based on forks from the YuzukiHD / YuzukiNeko ecosystem for Allwinner F101 and Zephyr.  
 It covers NekoBox, LVGL interfaces, media playback, game emulators, MicroPython and ncnn examples.
